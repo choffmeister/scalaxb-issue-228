@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="definitions"
+        xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:activiti="http://activiti.org/bpmn"
+        typeLanguage="http://www.w3.org/2001/XMLSchema"
+        expressionLanguage="http://www.w3.org/1999/XPath"
+        targetNamespace="http://www.activiti.org/bpmn2.0">
+    <process id="hello">
+        <startEvent id="theStart"/>
+        <sequenceFlow id="flow1" sourceRef="theStart" targetRef="userTask"/>
+        <userTask id="userTask" name="A user task">
+            <multiInstanceLoopCharacteristics>
+                <loopCardinality>
+                    12
+                    <documentation textFormat="text/plain">The loop cardinality</documentation>
+                    34
+                </loopCardinality>
+            </multiInstanceLoopCharacteristics>
+        </userTask>
+        <sequenceFlow id="flow2" sourceRef="userTask" targetRef="theEnd"/>
+        <endEvent id="theEnd"/>
+    </process>
+</definitions>
