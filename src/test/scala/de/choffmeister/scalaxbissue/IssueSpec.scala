@@ -18,8 +18,8 @@ class IssueSpec extends SpecificationWithJUnit {
 
       val loopCardinality = userTask.get.loopCharacteristics.get.value.asInstanceOf[TMultiInstanceLoopCharacteristics].loopCardinality.get
 
-      loopCardinality.toString must contain("10")
-      loopCardinality.toString must contain("20")
+      loopCardinality.toString must contain("12")
+      loopCardinality.toString must contain("34")
     }
   }
 
